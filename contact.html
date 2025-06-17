@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact • UMG Technologies Inc.</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .contact-form { max-width: 600px; margin: 0 auto; padding: 2rem 0; }
+    .contact-form label { display: block; margin-top: 1rem; font-weight: 600; }
+    .contact-form input, .contact-form textarea {
+      width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px;
+    }
+    .contact-form button {
+      margin-top: 1rem; background: var(--umg-red); color: #fff; border: none;
+      padding: 0.75rem 1.5rem; border-radius: 4px; cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+       <img src="assets/logo.png" alt="UMG Technologies logo" class="logo">
+       <nav id="nav">
+         <a href="index.html">Home</a>
+         <a href="about.html">About</a>
+         <a href="index.html#products">Products</a>
+         <a href="contact.html">Contact</a>
+       </nav>
+       <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <section class="products">
+     <div class="container">
+        <h2>Contact Us</h2>
+        <p>Have a question or want to discuss a custom automation solution? Use the form below or email <a href="mailto:info@umgtinc.com">info@umgtinc.com</a>.</p>
+
+        <form class="contact-form" action="https://formspree.io/f/your-id" method="POST">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="_replyto" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+     </div>
+  </section>
+
+  <footer>
+     <div class="container">
+        <p>© <span id="year"></span> UMG Technologies, Inc. All rights reserved.</p>
+     </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
