@@ -1,60 +1,84 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UMG Technologies Inc.</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UMG Technologies, Inc. – High-Speed Precision Automation</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/main.js"></script>
 </head>
 <body>
-  <header>
-    <div class="container">
-       <img src="assets/logo.png" alt="UMG Technologies logo" class="logo">
-       <nav id="nav">
-         <a href="index.html">Home</a>
-         <a href="about.html">About</a>
-         <a href="#products">Products</a>
-         <a href="contact.html">Contact</a>
-       </nav>
-       <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+  <!-- Header -->
+  <header id="mainHeader" class="transparent">
+    <div class="container flex between center">
+      <a href="#top" class="logo">UMG <span>Tech.</span></a>
+      <nav>
+        <ul class="flex center gap-2">
+          <li><a href="#solutions">Solutions</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#partners">Partners</a></li>
+          <li><button id="contactBtn" class="btn-outline">Contact Us</button></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <section class="hero">
-     <div class="container">
-        <h1>Precision Automation Solutions</h1>
-        <p>Innovating pin-handling and industrial automation systems since 2003.</p>
-        <a href="#products" class="btn">Explore Our Tech</a>
-     </div>
+  <!-- Hero -->
+  <section id="top" class="hero flex column center">
+    <h1>Next‑Generation Pin‑Insertion Automation</h1>
+    <p>Reliable. Modular. Data‑driven.</p>
+    <a href="#solutions" class="btn-primary">Explore Solutions</a>
   </section>
 
-  <section id="products" class="products">
-     <div class="container">
-        <h2>Core Competencies</h2>
-        <div class="grid">
-           <div class="card">
-              <h3>Pin Automation</h3>
-              <p>High‑speed, high‑accuracy pin insertion machinery for manufacturers.</p>
-           </div>
-           <div class="card">
-              <h3>Vision‑Guided Robotics</h3>
-              <p>Advanced C#/C++ software fusing computer vision with motion control.</p>
-           </div>
-           <div class="card">
-              <h3>Custom Software</h3>
-              <p>Tailored Windows IoT solutions built atop our proven .NET platform.</p>
-           </div>
-        </div>
-     </div>
+  <!-- Solutions placeholder -->
+  <section id="solutions" class="content container">
+    <h2>Our Core Offerings</h2>
+    <div class="grid-3">
+      <!-- Cards -->
+      <article class="card"> … </article>
+      <article class="card"> … </article>
+      <article class="card"> … </article>
+    </div>
   </section>
 
+  <!-- Partners strip -->
+  <section id="partners" class="partners">
+    <h2>Trusted by Industry Leaders</h2>
+    <div class="logo-grid">
+      <img src="assets/partners/aptiv.svg" alt="Aptiv logo" />
+      <img src="assets/partners/kistler.svg" alt="Kistler logo" />
+      <img src="assets/partners/bosch.svg" alt="Bosch logo" />
+      <img src="assets/partners/te.svg" alt="TE Connectivity logo" />
+      <img src="assets/partners/siemens.svg" alt="Siemens logo" />
+    </div>
+  </section>
+
+  <!-- News -->
+  <section id="news" class="content alt-bg">
+    <div class="container">
+      <h2>Company News & Achievements</h2>
+      <div id="newsFeed" class="news-feed"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-     <div class="container">
-        <p>© <span id="year"></span> UMG Technologies, Inc. All rights reserved.</p>
-     </div>
+    <div class="container flex between center">
+      <p>&copy; 2025 UMG Technologies, Inc.</p>
+      <a href="#top" aria-label="Back to top">↑</a>
+    </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <!-- Contact slide‑out -->
+  <aside id="contactPanel" class="contact-panel">
+    <button id="closeContact" aria-label="Close contact panel">×</button>
+    <h2>Get in Touch</h2>
+    <form action="https://formspree.io/f/yourid" method="POST">
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <textarea name="message" placeholder="Your message…" required></textarea>
+      <button type="submit" class="btn-primary">Send</button>
+    </form>
+  </aside>
 </body>
 </html>
